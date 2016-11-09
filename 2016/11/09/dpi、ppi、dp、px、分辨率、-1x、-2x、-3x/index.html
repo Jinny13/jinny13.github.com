@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        Hello World｜Jinny&#39;s blog
+        dpi、ppi、dp、px、分辨率、@1x、@2x、@3x｜Jinny&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/2016/10/27/hello-world/">
+    <link rel="canonical" href="http://yoursite.com/2016/11/09/dpi、ppi、dp、px、分辨率、-1x、-2x、-3x/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -77,6 +77,14 @@
                     </li>
 					
                     
+                        
+							
+                        <li>
+                            <a href="/tags/">tags</a>
+                        </li>
+							
+						
+                    
 					
 					
                 </ul>
@@ -120,13 +128,13 @@
 
 
 <img class="wechat-title-img"
-     src="IMG_6386.jpg">
+     src="http://ofpbvpwjm.bkt.clouddn.com/封面01.jpg">
 
 
 <style>
     
     header.intro-header {
-        background-image: url('IMG_6386.jpg')
+        background-image: url('http://ofpbvpwjm.bkt.clouddn.com/封面01.jpg?imageView2/1/w/1400/h/400/interlace/1/q/90')
     }
 
     
@@ -137,15 +145,21 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>Hello World</h1>
+                    <h1>dpi、ppi、dp、px、分辨率、@1x、@2x、@3x</h1>
                     
                     <span class="meta">
                          作者 Jinny
                         <span>
-                          日期 2016-10-27
+                          日期 2016-11-09
                          </span>
                     </span>
                     <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#设计规范"
+                           title="设计规范">设计规范</a>
+                        
+                        <a class="tag" href="/tags/#UI"
+                           title="UI">UI</a>
                         
                     </div>
                 </div>
@@ -154,7 +168,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            Hello World
+            dpi、ppi、dp、px、分辨率、@1x、@2x、@3x
         </span>
     </div>
 </header>
@@ -165,17 +179,65 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>fist page</p>
+                <p>写在最前面：<br>从事设计以来，这些单位概念，总是反复循环的遗忘混淆，于是下定决心整理一份自己容易理解的笔记，分享出来供大家一起参考。如有什么不对的地方，可以留言指教，定期修正。谢谢！</p>
+<hr>
+<ul>
+<li><p><strong>px：</strong>像素  </p>
+</li>
+<li><p><strong>分辨率：</strong>屏幕水平方向上的像素 × 垂直方向上的像素，单位为px；  </p>
+<ul>
+<li><code>例：iphone5的分辨率为：640 × 1136 px</code>     </li>
+</ul>
+</li>
+<li><p><strong>ppi：</strong>Pixel per inch，每英寸像素数，为像素密度，单位：像素/每英寸  </p>
+<ul>
+<li><code>针对显示器设计时，ppi=dpi</code></li>
+</ul>
+</li>
+<li><p><strong>dpi：</strong>dots per inch，每英寸像素点，为像素密度，单位：像素/每英寸；  </p>
+<ul>
+<li><code>dpi=√ (屏幕水平像素^2 + 屏幕垂直像素^2) / 屏幕英寸数</code>  </li>
+</ul>
+</li>
+<li><p><strong>dp：</strong>在Android开发中，使不同密度的屏幕显示一致的UI元素。称“密度独立像素”  </p>
+<ul>
+<li><code>dp=（dpi/（160像素/英寸））px</code>  </li>
+</ul>
+</li>
+<li><strong>@1x、@2x、@3x：</strong>在ios开发中，为使在不同设备下显示一致的UI元素，将iphone手机分为了3类，对应称之为<strong>一倍图、二倍图、三倍图</strong>  </li>
+</ul>
+<h2 id="在Android开发中的应用"><a href="#在Android开发中的应用" class="headerlink" title="在Android开发中的应用"></a>在Android开发中的应用</h2><p><img src="http://ofpbvpwjm.bkt.clouddn.com/Android.png" alt="Android"><br>如上图所示，为方便开发，Android将主流设备分为了<strong>mdpi、hdpi、xhdpi、xxhdpi、xxxhdpi</strong>五大类。  </p>
+<p>例如：华为 Nova手机<br>主屏尺寸：5英寸  1080x1920像素<br>则：ppi=dpi=√ (1080^2 + 1920^2) / 屏幕英寸数 ≈ 440像素/每英寸<br>dp=（440/（160像素/英寸））px ≈ 3px<br>其实当我们计算出dpi的时候，通过上表就可以知道，该屏幕属于xxhdpi屏，俗称3倍图  </p>
+<blockquote>
+<p>通过计算可以得出，一般情况下：<br>360px 宽的屏幕为mdpi（1倍图）<br>480px 宽的屏幕为hdpi（1.5倍图）<br>720px 宽的屏幕为xhdpi（2倍图）<br>1080px 宽的屏幕为xxhdpi（3倍图）<br>1440px 宽的屏幕为xxxhdpi（4倍图）  </p>
+</blockquote>
+<h3 id="Android设计中常见的尺寸与距离："><a href="#Android设计中常见的尺寸与距离：" class="headerlink" title="Android设计中常见的尺寸与距离："></a>Android设计中常见的尺寸与距离：</h3><ul>
+<li>顶部状态栏高度：24dp</li>
+<li>Appbar最小高度：56dp</li>
+<li>底部导航栏高度：48dp</li>
+<li>悬浮按钮尺寸：56x56dp/40x40dp</li>
+<li>用户头像尺寸：64x64dp/40x40dp</li>
+<li>小图标点击区域：48x48dp</li>
+<li>侧边抽屉到屏幕右边的距离：56dp</li>
+<li>卡片间距：8dp</li>
+<li>分隔线上下留白：8dp</li>
+<li>大多元素的留白距离：16dp</li>
+<li>屏幕左右对齐基线：16dp</li>
+<li>文字左侧对齐基线：72dp  </li>
+</ul>
+<p><strong>栅格系统的最小单位是8dp，一切距离、尺寸都应该是8dp的整数倍</strong><br><strong>所有可操作元素最小点击区域尺寸：48dp × 48dp；如实在满足不了可缩小视觉控件的大小，但是需要保留点击区域的大小</strong>  </p>
+<h2 id="在iOS开发中的应用"><a href="#在iOS开发中的应用" class="headerlink" title="在iOS开发中的应用"></a>在iOS开发中的应用</h2><p><img src="http://ofpbvpwjm.bkt.clouddn.com/iPhone01.png" alt="iPhone"><br>如上图所示，为方便开发，苹果将设备分为了@1x、@2x、@3x三大类。  </p>
+<p>除了状态栏高度无法改变，别的可以根据实际设计进行微调。<br><strong>在@2x屏幕下，所有可操作元素最小点击区域尺寸为88px；如实在满足不了可缩小视觉控件的大小，但是需要保留点击区域的大小</strong>  </p>
+<p>根据上表所示，我个人习惯用iPhone5作为设计原始稿尺寸，所有icon都用矢量的图形元素进行绘制，方便后续的放大缩小处理。之所以用iPhone5的尺寸，是因为，5和6同为@2x，如用6的尺寸来设计，容易使5的界面元素太过拥挤。  </p>
+<hr>
+<blockquote>
+<p>参考资料：<br><a href="http://www.cnblogs.com/yaozhongxiao/archive/2014/07/14/3842908.html" target="_blank" rel="external">http://www.cnblogs.com/yaozhongxiao/archive/2014/07/14/3842908.html</a><br><a href="http://www.zcool.com.cn/article/ZNzEwMjg=.html" target="_blank" rel="external">http://www.zcool.com.cn/article/ZNzEwMjg=.html</a><br><a href="https://material.google.com/layout/units-measurements.html#units-measurements-designing-layouts-for-dp" target="_blank" rel="external">https://material.google.com/layout/units-measurements.html#units-measurements-designing-layouts-for-dp</a><br><a href="https://developer.apple.com/ios/human-interface-guidelines/graphics/app-icon/" target="_blank" rel="external">https://developer.apple.com/ios/human-interface-guidelines/graphics/app-icon/</a>  </p>
+</blockquote>
 
                 <hr>
                 
 
                 <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2016/10/28/jinny-test/" data-toggle="tooltip" data-placement="top"
-                           title="jinny-test">&larr; Previous Post</a>
-                    </li>
                     
                     
                 </ul>
@@ -188,7 +250,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#在Android开发中的应用"><span class="toc-text">在Android开发中的应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Android设计中常见的尺寸与距离："><span class="toc-text">Android设计中常见的尺寸与距离：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在iOS开发中的应用"><span class="toc-text">在iOS开发中的应用</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -314,7 +376,7 @@
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <!--wechat title img-->
-<img class="wechat-title-img" src="undefined">
+<img class="wechat-title-img" src="http://ofpbvpwjm.bkt.clouddn.com/%E5%93%86%E5%95%A6a%E6%A2%A6-%E6%96%B9.png">
 </body>
 
 </html>
